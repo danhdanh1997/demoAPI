@@ -1,29 +1,24 @@
 package com.example.demo;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "users")
+@Table(name = "parents")
 @Getter
 @Setter
-public class User {
+public class Parent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-    @Column(name = "userId")
+    @Column(name = "parentId")
     private Integer id;
 
-    @Column(name = "user_name")
+    @Column(name = "parent_name")
     private String name;
 
     @Column(name = "email")
     private String email;
-
-    @ManyToOne
-    @JoinColumn(name = "parentId",referencedColumnName = "parentId", nullable = false,updatable = false, insertable = true)
-    private Parent employee;
 }

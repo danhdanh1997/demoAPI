@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo
+    username: postgres
+    password: danh12345
+    hikari:
+      schema: demo
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: demo
+        session:
+          events:
+            log:
+              LOG_QUERIES_SLOWER_THAN_MS: 100
+    show-sql: true
