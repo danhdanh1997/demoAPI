@@ -15,6 +15,7 @@ public class ParentController {
 
     @PostMapping("/parents/create")
     public ResponseEntity<Parent> createParent(@RequestBody Parent parent){
+        System.out.println("hello xuan danh");
         return ResponseEntity.status(HttpStatus.CREATED).body(parentRepository.save(parent));
     }
 
