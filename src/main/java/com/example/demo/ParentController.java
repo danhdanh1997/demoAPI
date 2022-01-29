@@ -28,10 +28,6 @@ public class ParentController {
     @PutMapping(value = "/parents/update/{parentId}")
     public ResponseEntity<Parent> updateParent(@PathVariable(value = "parentId") Integer parentId, @RequestBody Parent parent){
         Optional<Parent>parent1 = parentRepository.findById(parentId);
-//        if (parent1.isPresent()){
-//            parent.setName(parent1.get().getName());
-//            parent.setEmail(parent1.get().getEmail());
-//        }
         if (parent1.isEmpty()){
             parent.setEmail(parent.getEmail());
             parent.setName(parent.getName());
