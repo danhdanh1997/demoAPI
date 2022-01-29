@@ -32,7 +32,7 @@ public class ParentController {
             parent.setEmail(parent.getEmail());
             parent.setName(parent.getName());
         }
-        System.out.println("hello sadlierconnect platform");
+
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(parentRepository.save(parent));
     }
 }
