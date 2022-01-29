@@ -21,7 +21,7 @@ public class ParentController {
 
     @GetMapping("/parents/{parentId}")
     public ResponseEntity<Parent> getParentById(@PathVariable(value = "parentId") Integer parentId){
-        Optional<Parent>parent = parentRepository.findById(parentId);
+        Optional<Parent> parent = parentRepository.findById(parentId);
         return ResponseEntity.status(HttpStatus.FOUND).body(parent.get());
     }
 
